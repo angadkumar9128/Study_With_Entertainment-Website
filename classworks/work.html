@@ -1,0 +1,458 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="workstyle.css">
+
+<body style="background-color: blue; margin: 30px;">
+
+
+
+    <div class="navbar">
+        <a href="#home">Home</a>
+        <div class="subnav">
+            <button class="subnavbtn">About <i class="fa fa-caret-down"></i></button>
+            <div class="subnav-content">
+                <a href="#company">Company</a>
+                <a href="#team">Team</a>
+                <a href="#careers">Careers</a>
+            </div>
+        </div>
+        <div class="subnav">
+            <button class="subnavbtn">Services <i class="fa fa-caret-down"></i></button>
+            <div class="subnav-content">
+                <a href="#bring">Bring</a>
+                <a href="#deliver">Deliver</a>
+                <a href="#package">Package</a>
+                <a href="#express">Express</a>
+            </div>
+        </div>
+        <div class="subnav">
+            <button class="subnavbtn">Partners <i class="fa fa-caret-down"></i></button>
+            <div class="subnav-content">
+                <a href="#link1">Link 1</a>
+                <a href="#link2">Link 2</a>
+                <a href="#link3">Link 3</a>
+                <a href="#link4">Link 4</a>
+            </div>
+        </div>
+        <a href="#contact">Contact</a>
+    </div>
+
+    <div style="padding:0 16px">
+        <h3>find your sulotion from here</h3>
+    </div>
+
+
+    <div class="color" style="color: white; font-size: x-large;">
+
+        <h1>DBMS ASSIGNMENTS</h1>
+        <h2>Assignment 1</h2>
+        <b>
+            <p style="color: yellow;">Q.1 Explain database architecture and application architecture.</p><br>
+
+            <h3>Database Architecture:</h3><br>
+            <p>
+                The Database Management System (DBMS) architecture shows how data in the database is viewed by the
+                users. It
+                is
+                not concerned about how the data are handled and processed by the DBMS.
+
+                It helps in implementation, design, and maintenance of a database to store and organize information for
+                companies. The concept of DBMS depends upon its architecture. The architecture can be designed as
+                centralized,
+                decentralized, or hierarchical.
+
+                The architecture of DBMS can be defined at three levels as follows-
+            </p><br>
+            <ol>
+
+                <li> External levels.</li>
+                <li> Conceptual levels.</li>
+                <li>Internal levels.</li>
+
+            </ol><br>
+            <p>The main objective of the three level architecture is nothing but to separate each user view of the data
+                from
+                the
+                way the database is physically represented. The database internal structure should be unaffected while
+                changes
+                to the physical aspects of storage.
+
+                The DBA should be able to change the conceptual structure of the database without affecting all other
+                users.
+            </p> <br>
+            <h3>External level/ View level</h3>
+            <p>External level describes a part of the database that is relevant to each user. This level insulates the
+                users
+                from the details of conceptual and the internal level.</p>
+            <h3>Conceptual level/ logic level</h3>
+            <p>Conceptual level describes what data is stored into the database and the relationship among the data.
+                <br>
+                <br>
+                It represents the following-
+            </p>
+            <ul>
+                <li>All the entities, attributes and their relationships.</li>
+                <li> The constraints on the data.</li>
+                <li>Security and integrity information.</li>
+
+            </ul>
+            <h3>Internal level/ storage level:</h3>
+            <p>
+                Internal level is the physical representation of the database on the computer. This level describes how
+                the
+                data is stored in the database. It covers the data structure and file organization used to store the
+                data on
+                storage devices.
+            </p><br>
+            <p>The levels in the architecture of DBMS are shown below in diagram form-
+            </p>
+            <img style="padding:30px; border: solid yellow " src="levels_in_architecture_of_dbms.jpg" height="mr-auto"
+                width="900px" alt=""><br>
+            <h3>Application Architecture:</h3><br>
+            <ul>
+                <li>The DBMS design depends upon its architecture. The basic client/server architecture is used to deal
+                    with a large number of PCs, web servers, database servers and other components that are connected
+                    with networks.</li>
+                <li>The client/server architecture consists of many PCs and a workstation which are connected via the
+                    network.</li>
+                <li>DBMS architecture depends upon how users are connected to the database to get their request done.
+                </li>
+
+            </ul>
+            <h3>Types of DBMS Architecture OR Application Architecture:</h3><br>
+            <img src="dbms-architecture.png" alt="">
+            <p>Database architecture can be seen as a single tier or multi-tier. But logically, database architecture is
+                of two types like: <b>2-tier architecture</b> and <strong>3-tier architecture</strong> .</p><br>
+            <h3>1-Tier Architecture-</h3><br>
+            <ul>
+                <li>In this architecture, the database is directly available to the user. It means the user can directly
+                    sit on the DBMS and uses it.</li>
+                <li>Any changes done here will directly be done on the database itself. It doesn't provide a handy tool
+                    for end users.</li>
+                <li>The 1-Tier architecture is used for development of the local application, where programmers can
+                    directly communicate with the database for the quick response.</li>
+
+            </ul><br>
+            <h3>2-Tier Architecture:</h3>
+            <ul>
+                <li>2-Tier Architecture</li>
+                <li>The 2-Tier architecture is same as basic client-server. In the two-tier architecture, applications
+                    on the client end can directly communicate with the database at the server side. For this
+                    interaction, API's like: ODBC, JDBC are used.</li>
+                <li>The user interfaces and application programs are run on the client-side.</li>
+                <li>The server side is responsible to provide the functionalities like: query processing and transaction
+                    management.</li>
+                <li>To communicate with the DBMS, client-side application establishes a connection with the server side.
+                </li>
+
+            </ul>
+            <img src="dbms-2-tier-architecture.png" alt=""><br>
+            2-tier Architecture <br>
+            <h3>3-Tier Architecture:</h3><br>
+            <ul>
+                <li>The 3-Tier architecture contains another layer between the client and server. In this architecture,
+                    client can't directly communicate with the server.</li>
+                <li>The application on the client-end interacts with an application server which further communicates
+                    with the database system.</li>
+                <li>End user has no idea about the existence of the database beyond the application server. The database
+                    also has no idea about any other user beyond the application.</li>
+                <li>The 3-Tier architecture is used in case of large web application.
+                </li>
+            </ul><br>
+            <img src="dbms-3-tier-architecture.png" alt=""><br>
+            3-tier Architecture <br>
+
+
+
+            <p style="color: yellow;"> Q 2.Explain the E-R model with an example. (Example should be your
+                project,assigned
+                in the lab)</p><br>
+
+            <h3>Entity-Relationship Diagrams:</h3><br>
+            <p>ER-modeling is a data modeling method used in software engineering to produce a conceptual data model of
+                an information system. Diagrams created using this ER-modeling method are called Entity-Relationship
+                Diagrams or ER diagrams or ERDs.</p>
+            <h3>Components of an ER Diagrams:</h3><br>
+            <img src="software-engineering-entity-relationship-diagrams.png" alt=""><br>
+            <h3>1. Entity</h3><br>
+            <p>An entity can be a real-world object, either animate or inanimate, that can be merely identifiable. An
+                entity is denoted as a rectangle in an ER diagram. For example, in a school database, students,
+                teachers, classes, and courses offered can be treated as entities. All these entities have some
+                attributes or properties that give them their identity.</p><br>
+            <h4>Entity Set:</h4><br>
+            <p>An entity set is a collection of related types of entities. An entity set may include entities with
+                attribute sharing similar values. For example, a Student set may contain all the students of a school;
+                likewise, a Teacher set may include all the teachers of a school from all faculties. Entity set need not
+                be disjoint.</p><br>
+            <img src="software-engineering-entity-relationship-diagrams2.jpg" alt="">
+            <h3>2. Attributes</h3>
+            <p>Entities are denoted utilizing their properties, known as attributes. All attributes have values. For
+                example, a student entity may have name, class, and age as attributes.</p><br>
+            <p>There exists a domain or range of values that can be assigned to attributes. For example, a student's
+                name cannot be a numeric value. It has to be alphabetic. A student's age cannot be negative, etc.</p>
+            <br>
+            <img src="software-engineering-entity-relationship-diagrams3.jpg" alt=""><br>
+            <h5>There are four types of Attributes:</h5>
+            <ol>
+                <li>Key attribute</li>
+                <li>Composite attribute</li>
+                <li>Single-valued attribute</li>
+                <li>Multi-valued attribute</li>
+                <li>Derived attribute</li>
+            </ol><br>
+            <a href="https://www.javatpoint.com/software-engineering-entity-relationship-diagrams"
+                style="color: red;">for detail information click here</a><br>
+
+            <h3>3. Relationships:</h3><br>
+            <p>The association among entities is known as relationship. Relationships are represented by the
+                diamond-shaped box. For example, an employee works_at a department, a student enrolls in a course. Here,
+                Works_at and Enrolls are called relationships.
+            </p><br>
+            <img src="software-engineering-entity-relationship-diagrams9.jpg" alt="">
+            RElation in ERD <br>
+            <h3>Relationship set:</h3><br>
+
+            <p>A set of relationships of a similar type is known as a relationship set. Like entities, a relationship
+                too can have attributes. These attributes are called descriptive attributes.</p>
+            <h3>Degree of a relationship set:</h3><br>
+            <p>The number of participating entities in a relationship describes the degree of the relationship. The
+                three most common relationships in E-R models are:
+
+            </p>
+            <ol>
+                <li>Unary (degree1)</li>
+                <li>Binary (degree2)</li>
+                <li>Ternary (degree3)</li>
+
+
+            </ol><br>
+            <a href="https://www.javatpoint.com/software-engineering-entity-relationship-diagrams"
+                style="color: red;">for detail information click here</a><br>
+            <h3>Cardinality=></h3><br>
+            <pCardinality describes the number of entities in one entity set, which can be associated with the number of
+                entities of other sets via relationship set.p>
+                <h4>Types of Cardinalities:</h4><br>
+                <ol>
+                    <li><b style="color:black;">One to One</b>:<p>One entity from entity set A can be contained with at
+                            most one entity of entity
+                            set B and vice versa. Let us assume that each student has only one student ID, and each
+                            student ID is assigned to only one person. So, the relationship will be one to one.</p>
+                    </li>
+                    <img src="software-engineering-entity-relationship-diagrams13.jpg" alt=""><br>
+                    <li><b style="color:black;">One to Many</b>:<p> More than one entity from entity set A can be
+                            associated with at most one entity of entity set
+                            B, however an entity from entity set B can be associated with more than one entity from
+                            entity
+                            set A. For example - many students can study in a single college, but a student cannot study
+                            in
+                            many colleges at the same time.</p><br>
+
+                        <img src="software-engineering-entity-relationship-diagrams15.jpg" alt="">
+                    </li>
+
+                    <li><b style="color:black;">Many to One</b>: <p>More than one entity from entity set A can be
+                            associated with at most one entity of entity set B, however an entity from entity set B can
+                            be associated with more than one entity from entity set A. For example - many students can
+                            study in a single college, but a student cannot study in many colleges at the same time.</p>
+                        <img src="software-engineering-entity-relationship-diagrams17.jpg" alt=""><br>
+
+                    </li>
+                    <li><b style="color:black;">Many to Many</b>: <p>One entity from A can be associated with more than
+                            one entity from B and vice-versa. For example, the student can be assigned to many projects,
+                            and a project can be assigned to many students.</p>
+
+                    </li>
+                    <img src="software-engineering-entity-relationship-diagrams19.jpg" alt="">
+
+                    </p>
+                </ol>
+
+
+
+                <p style="color: yellow;">Q 3. Illustrate the extended ER model.</p>
+
+                <h3>Extended ER Model OR Enhanced ER Model:</h3>
+                <p>Extended ER is a high-level data model that incorporates the extensions to the original ER model.
+                    Enhanced ER models are high level models that represent the requirements and complexities of complex
+                    databases.</p>
+                <p>The extended Entity Relationship (ER) models are three types as given below -</p><br>
+                <ul>
+                    <li>Aggregation</li>
+                    <li>Specialization</li>
+                    <li>Generalization</li>
+                </ul>
+                <h4>Specialization:</h4>
+                <p>The process of designing sub groupings within an entity set is called specialization. It is a
+                    top-down process. If an entity set is given with all the attributes in which the instances of the
+                    entity set are differentiated according to the given attribute value, then that sub-classes or the
+                    sub-entity sets can be formed from the given attribute.</p>
+                <h5>Example:</h5>
+                <p>Specialization of a person allows us to distinguish a person according to whether they are employees
+                    or customers. Specialization of account creates two entity sets: savings account and current
+                    account.</p>
+                <p>In the E-R diagram specialization is represented by triangle components labeled ISA. The ISA
+                    relationship is referred as superclass- subclass relationship as shown below -</p>
+                <img src="specialization.jpg" alt="">
+
+                <h3>Generalization:</h3>
+                <p>It is the reverse process of specialization. It is a bottom-up approach.</p>
+                <p>It converts subclasses to superclasses. This process combines a number of entity sets that share the
+                    same features into higher-level entity sets.</p>
+                <p>If the sub-class information is given for the given entity set then, ISA relationship type will be
+                    used to represent the connectivity between the subclass and superclass as shown below -</p>
+                <h5>Example:</h5>
+                <img src="generalization.jpg" alt=""><br>
+                <h3>Aggregation:</h3>
+                <p>It is an abstraction in which relationship sets are treated as higher level entity sets and can
+                    participate in relationships. Aggregation allows us to indicate that a relationship set participates
+                    in another relationship set.</p>
+                <p>Aggregation is used to simplify the details of a given database where ternary relationships will be
+                    changed into binary relationships. Ternary relation is only one type of relationship which is
+                    working between three entities.</p>
+                <p>Aggregation is shown in the image below −</p>
+                <img src="aggregation.jpg" alt=""><br>
+
+
+                <h2>Assignment 2:</h2><br>
+                <p style="color: yellow;">Q 2. Given a relation R( P, Q, R, S, T) and Functional Dependency set FD = {
+                    PQ → R, S → T },
+                    determine whether the given R is in 2NF? If not convert it into 2 NF.</p>
+
+                <h5 style="color: black;">Solutio:</h5>
+
+                <p>Let us construct an arrow diagram on R using FD to calculate the candidate key.</p>
+                <img src="dbms-questions-on-normalization2" alt="">
+                <p>From above arrow diagram on R, we can see that an attributes PQS is not determined by any of the
+                    given FD, hence PQS will be the integral part of the Candidate key, i.e., no matter what will be the
+                    candidate key, and how many will be the candidate key, but all will have PQS compulsory attribute.
+                </p>
+                <h5>Let us calculate the closure of PQS</h5>
+                <p>PQS + = PQSRT (from the method we studied earlier)</p>
+                <p>Since the closure of PQS contains all the attributes of R, hence PQS is Candidate Key</p>
+                <p>Since all key will have PQS as an integral part, and we have proved that PQS is Candidate Key.
+                    Therefore, any superset of PQS will be Super Key but not Candidate key.</p>
+                <p>Hence there will be only one candidate key PQS</p>
+                <h5>Definition of 2NF:</h5>
+                <p>Since R has 5 attributes: - P, Q, R, S, T and Candidate Key is PQS, Therefore, prime attributes (part
+                    of candidate key) are P, Q, and S while a non-prime attribute is R and T</p>
+                <p>a) FD: PQ → R does not satisfy the definition of 2NF, that non-prime attribute( R) is partially
+                    dependent on part of candidate key PQS.</p>
+                <p>b) FD: S → T does not satisfy the definition of 2NF, as a non-prime attribute(T) is partially
+                    dependent on candidate key PQS (i.e., key should not be broken at any cost).</p>
+                <p>Hence, FD PQ → R and S → T, the above table R( P, Q, R, S, T) is not in 2NF</p>
+                <p>Convert the table R( P, Q, R, S, T) in 2NF:</p>
+                <p>Since due to FD: PQ → R and S → T, our table was not in 2NF, let's decompose the table <br>
+
+                    <br> R1(P, Q, R) (Now in table R1 FD: PQ → R is Full F D, hence R1 is in 2NF) <br>
+
+                    <br> R2( S, T) (Now in table R2 FD: S → T is Full F D, hence R2 is in 2NF) <br>
+
+                    <br> And create one table for the key, since the key is PQS. <br>
+
+                    <br> R3(P, Q, S) <br>
+
+                    <br> Finally, the decomposed tables which is in 2NF are:
+                </p>
+
+                a) R1( P, Q, R) <br>
+
+                b) R2(S, T) <br>
+
+                c) R3(P, Q, S)
+
+
+
+                <P style="color: yellow;">Q 3. Given a relation R( P, Q, R, S, T, U, V, W, X, Y) and Functional
+                    Dependency set FD = { PQ → R, PS → VW, QS → TU, P → X, W → Y }, determine whether the given R is in
+                    2NF? If not convert it into 2 NF.</P>
+                <h5>Solution:</h5>
+                <p> Let us construct an arrow diagram on R using FD to calculate the candidate key.
+
+                </p>
+                <img src="dbms-questions-on-normalization3.png" alt="">
+                <p>From above arrow diagram on R, we can see that an attributes PQS is not determined by any of the
+                    given FD, hence PQS will be the integral part of the Candidate key, i.e. no matter what will be the
+                    candidate key, and how many will be the candidate key, but all will have PQS compulsory attribute.
+                    <br> <br>
+
+                    <br> Let us calculate the closure of PQS <br>
+
+                    <br> PQS + = P Q S R T U V W X Y (from the closure method we studied earlier) <br>
+
+                    <br> Since the closure of PQS contains all the attributes of R, hence PQS is Candidate Key <br>
+
+                    <br> From the definition of Candidate Key(Candidate Key is a Super Key whose no proper subset is a
+                    Super key) <br>
+
+                    <br> Since all key will have PQS as an integral part, and we have proved that PQS is Candidate Key,
+                    Therefore, any superset of PQS will be Super Key but not a Candidate key. <br>
+
+                    <br> Hence there will be only one candidate key PQS
+                </p> <br>
+                <p>Definition of 2NF: No non-prime attribute should be partially dependent on Candidate Key</p> <br>
+                <p>Since R has 10 attributes: - P, Q, R, S, T, U, V, W, X, Y, and Candidate Key is PQS calculated using
+                    FD = { PQ → R, PS → VW, QS → TU, P → X, W → Y }. Therefore, prime attribute(part of candidate key)
+                    are P, Q, and S while non-prime attribute are R, T, U, V, W, X and Y <br>
+
+                    <br> a. FD: PQ → R does not satisfy the definition of 2NF, that non-prime attribute( R) is partially
+                    dependent on part of candidate key PQS <br>
+                    <br> b. FD: PS → VW does not satisfy the definition of 2NF, that non-prime attribute( VW) is
+                    partially dependent on part of candidate key PQS <br>
+                    <br> c. FD: QS → TU does not satisfy the definition of 2NF, that non-prime attribute( TU) is
+                    partially dependent on part of candidate key PQS <br>
+                    <br> d. FD: P → X does not satisfy the definition of 2NF, that non-prime attribute( X) are partially
+                    dependent on part of candidate key PQS <br>
+                    <br> e. FD: W → Y does not violate the definition of 2NF, as the non-prime attribute(Y) is dependent
+                    on the non-prime attribute(W), which is not related to the definition of 2NF.
+                </p> <br>
+
+                <p>
+                    Hence because of FD: PQ → R, PS → VW, QS → TU, P → X the above table R( P, Q, R, S, T, U, V, W, X,
+                    Y) is not in 2NF <br>
+
+                    <br> Convert the table R( P, Q, R, S, T, U, V, W, X, Y) in 2NF: <br>
+
+                    <br> Since due to FD: PQ → R, PS → VW, QS → TU, P → X our table was not in 2NF, let's decompose the
+                    table <br>
+
+                    <br> R1(P, Q, R) (Now in table R1 FD: PQ → R is Full F D, hence R1 is in 2NF) <br>
+
+                    <br> R2( P, S, V, W) (Now in table R2 FD: PS → VW is Full F D, hence R2 is in 2NF) <br>
+
+                    <br> R3( Q, S, T, U) (Now in table R3 FD: QS → TU is Full F D, hence R3 is in 2NF) <br>
+
+                    <br> R4( P, X) (Now in table R4 FD : P → X is Full F D, hence R4 is in 2NF) <br>
+
+                    <br> R5( W, Y) (Now in table R5 FD: W → Y is Full F D, hence R2 is in 2NF) <br>
+
+                    <br> And create one table for the key, since the key is PQS. <br>
+
+                    <br> R6(P, Q, S) <br>
+
+                    <br> Finally, the decomposed tables which is in 2NF are: <br>
+
+                    <br> R1(P, Q, R) <br>
+
+                    <br> R2( P, S, V, W) <br>
+
+                    <br> R3( Q, S, T, U) <br>
+
+                    <br> R4( P, X) <br>
+
+                    <br> R5( W, Y) <br>
+
+                    <br> R6(P, Q, S) <br>
+                </p>
+
+
+    </div>
+
+
+</body>
+</head>
+
+</html>
